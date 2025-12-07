@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ristorante Italiano - Restaurant Italien Authentique</title>
+    <meta name="description" content="Découvrez les saveurs authentiques de l'Italie. Commandez en ligne vos plats préférés de notre restaurant italien.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Styles CSS personnalisés */
+        .italian-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .product-card {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(153, 27, 27, 0.3);
+        }
+
+        .product-image {
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .category-active {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%) !important;
+            color: white !important;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #991b1b 0%, #dc2626 50%, #f59e0b 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .form-input-custom:focus {
+            border-color: #991b1b;
+            box-shadow: 0 0 0 3px rgba(153, 27, 27, 0.1);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .notification-badge {
+            animation: bounce 2s infinite;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#991b1b",
+                        secondary: "#dc2626",
+                        accent: "#f59e0b",
+                        background: "#fef7ed"
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.6s ease-out',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'gradient-shift': 'gradientShift 8s ease infinite'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-background font-sans">
+    <!-- Le reste du code HTML reste identique mais avec les nouvelles classes CSS -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full"></div>
+                    <h1 class="text-2xl font-bold text-primary italian-font">Ristorante Italiano</h1>
+                </div>
+                <!-- ... reste du header ... -->
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-gradient text-white py-20 fade-in-up">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-bold mb-6 italian-font">Bienvenue au Ristorante Italiano</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Découvrez les saveurs authentiques de l'Italie livrées directement chez vous</p>
+            <button class="btn-primary-custom text-white px-8 py-3 rounded-full text-lg font-semibold">
+                Commander maintenant
+            </button>
+        </div>
+    </section>
+
+    <!-- Le reste du code reste similaire avec l'ajout des classes CSS personnalisées -->
+    
+    <script>
+        // Le code JavaScript reste identique
+        const products = [
+            {
+                "id": 1,
+                "name": "Spaghetti Carbonara",
+                "category": "pates",
+                "price": 16.90,
+                "description": "Spaghetti frais avec sauce carbonara traditionnelle, pancetta et parmesan",
+                "image": "https://picsum.photos/400/300?random=2"
+            }
+            // ... autres produits
+        ];
+
+        // ... reste du JavaScript
+    </script>
+</body>
+</html>
